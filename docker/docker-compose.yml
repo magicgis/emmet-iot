@@ -1,0 +1,25 @@
+version: '2'
+services:
+  node-red:
+    restart: always
+    build:
+        context: ./node-red
+
+    volumes:
+      - "/srv/docker/node-red:/root/.node-red"
+
+    ports:
+      - "1880:1880"
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    restart: always
+    build:
+        context: ./RabbitMq
+    ports:
+      - "15672:15672"
+      - "15674:15674"
+      - "61613:61613"
+      - "5672:5672"
+     

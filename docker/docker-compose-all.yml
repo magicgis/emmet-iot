@@ -1,0 +1,17 @@
+version: '2'
+services:
+  device_gateway:
+    image: emmet/emmet-iot-gateway-dm:latest
+    depends_on:
+      - mosquitto
+    restart: always
+    ports:
+      - "8080:8080"
+
+  mosquitto:
+    image: eclipse-mosquitto
+    restart: always
+
+    ports:
+      - "1883:1883"
+      - "9001:9001"
