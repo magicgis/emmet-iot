@@ -1,0 +1,10 @@
+gateway:
+  mqtt:
+    broker-url: tcp://localhost:1883
+#    broker-url: tcp://iot.eclipse.org:1883
+#    broker-url: tcp://61.62.58.30:5566
+
+logging.level.com.emmet: DEBUG
+
+server:
+  port: 8081

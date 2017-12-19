@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello WebSocket</title>
+    </head>
+    <body onload="disconnect()">
+        <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
+            Javascript and reload this page!</h2></noscript>
+        <div>
+            <div>
+                <button id="connect" onclick="connect();">Connect</button>
+                <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+            </div>
+            <div id="conversationDiv">
+                <label>Device ID: </label><input type="text" id="name" value="test" />
+                <button id="sendName" onclick="sendDeviceName();">Send</button>
+                <p id="response"></p>
+            </div>
+            <p id="response"></p>
+            <div id="clockDiv">
+                <p id="time"></p>
+            </div>            
+        </div>
+        <script src="stomp.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
