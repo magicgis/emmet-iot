@@ -24,7 +24,7 @@ public abstract class BaseDeviceStatusObserver implements DeviceStatusObserver {
 		queueComsumerThread = new Thread(new StatusQueueComsumer());
 		isRunning = true;
 		queueComsumerThread.start();
-		log.info("-------------------queueComsumerThread.start-----------------------");
+		log.debug("-------------------queueComsumerThread.start-----------------------");
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public abstract class BaseDeviceStatusObserver implements DeviceStatusObserver {
 	class StatusQueueComsumer implements Runnable {
 		@Override
 		public void run() {
-			log.info("------------------------------------------");
+			log.debug("------------------------------------------");
 			while (isRunning) {
 				DeviceStatusNotification status;
 				try {
