@@ -19,7 +19,7 @@ spring:
   profiles: aws
 
   rabbitmq:
-    host: lcoalhost
+    host: iot.emmet-project.com
     port: 5672
     virtual-host: /
     username: emmet
@@ -27,7 +27,7 @@ spring:
  
 gateway:
   mqtt:
-    broker-url: tcp://lcoalhosts:1883
+    broker-url: tcp://iot.emmet-project.com:1883
 
 
 
