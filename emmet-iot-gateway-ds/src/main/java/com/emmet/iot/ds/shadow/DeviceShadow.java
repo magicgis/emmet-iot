@@ -96,8 +96,6 @@ public class DeviceShadow extends MqttPubSubClient {
 					e.printStackTrace();
 				}
 			}
-			System.out.println(status);
-			System.out.println(this.getStatus());
 			status.setOnline(true);
 			statusListener.onDeviceStatusChange(status);
 //			statusListener.onDeviceStatusChange(this.getStatus());
