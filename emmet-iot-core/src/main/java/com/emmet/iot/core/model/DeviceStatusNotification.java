@@ -37,7 +37,7 @@ public class DeviceStatusNotification {
 		ChannelStatus cs = new ChannelStatus();
 		cs.setName(name);
 		cs.setValue(value);
-		cs.setLastUdateTime(System.currentTimeMillis());
+		cs.setLastUpdateTime(System.currentTimeMillis());
 		channels.add(cs);
 	}
 

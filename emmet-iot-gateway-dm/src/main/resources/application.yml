@@ -8,7 +8,7 @@ spring:
  
 gateway:
   mqtt:
-    broker-url: tcp://iot.emmet-project.com:1883
+    broker-url: tcp://localhost:1883
 #    broker-url: tcp://iot.eclipse.org:1883
 #    broker-url: tcp://61.62.58.30:5566
 
