@@ -175,7 +175,7 @@ public class DeviceCollection extends MqttPubSubClient implements DeviceStatusLi
 		RequestDeviceStatusCommand command = new RequestDeviceStatusCommand();
 
 		this.publish(deviceControlTopic, command);
-		log.info("<Device Manager> Reporting device status request has published to: (" + deviceId + ")");
+		log.info("<Device Manager> A new device's heartbeat received, the register request has published to the device.");
 	}
 
 	private boolean isDeviceShadowManaged(String deviceID) {

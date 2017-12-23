@@ -41,4 +41,9 @@ public class DeviceStatusNotification {
 		channels.add(cs);
 	}
 
+	@Override
+	public String toString() {
+		return "DeviceStatusNotification [deviceId=" + deviceId + ", online=" + online + ", channels=" + channels + "]";
+	}
+
 }

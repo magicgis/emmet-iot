@@ -40,4 +40,12 @@ public class ChannelStatus {
 		this.value = value;
 	}
 
+	@Override
+	public String toString() {
+		return "ChannelStatus [lastUpdateTime=" + lastUpdateTime + ", name=" + name + ", value=" + value + ", online="
+				+ online + "]";
+	}
+	
+	
+
 }
