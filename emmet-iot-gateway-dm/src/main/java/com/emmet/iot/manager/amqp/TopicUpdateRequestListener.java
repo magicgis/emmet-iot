@@ -2,6 +2,8 @@ package com.emmet.iot.manager.amqp;
 
 import java.util.Date;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -19,18 +21,24 @@ import com.emmet.iot.manager.exception.DeviceNotFoundException;
 @Component
 @RabbitListener(queues = "device_update")
 public class TopicUpdateRequestListener {
-
+	private static final Log log = LogFactory.getLog(TopicUpdateRequestListener.class);
 	@Autowired
 	DeviceCollection deviceCollection;
 
 	@RabbitHandler
-	public void process(@Payload byte[] payload) throws DeviceNotFoundException, MqttPersistenceException, MqttException {
+	public void process(@Payload byte[] payload)
+			throws DeviceNotFoundException, MqttPersistenceException, MqttException {
 		System.out.println(new Date() + ": " + new String(payload));
-		ChannelUpdateRequest request = JsonHelper.JsonStringToObject(new String(payload), ChannelUpdateRequest.class);
-		System.out.println(request);
-		
-		DeviceShadow device = deviceCollection.getDevice(request.getDeviceId());
-		device.updateDevice(request);
-		
+
+		try {
+			ChannelUpdateRequest request = JsonHelper.JsonStringToObject(new String(payload),
+					ChannelUpdateRequest.class);
+			System.out.println(request);
+			DeviceShadow device = deviceCollection.getDevice(request.getDeviceId());
+			device.updateDevice(request);
+		} catch (Exception e) {
+            log.error(new String(payload) + e.getMessage());
+		}
+
 	}
 }
