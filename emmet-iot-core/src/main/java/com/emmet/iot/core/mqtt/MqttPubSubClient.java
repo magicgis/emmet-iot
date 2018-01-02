@@ -126,8 +126,7 @@ public abstract class MqttPubSubClient {
 			log.debug("Publish message! topic: " + topic + " message: " + jsonString);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 
