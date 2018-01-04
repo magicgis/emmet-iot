@@ -12,19 +12,36 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
-	@RequestMapping(path = "/login", method = RequestMethod.GET)
+	@RequestMapping(path = "/login", method = RequestMethod.POST)
 	public ResponseEntity<?> login(@RequestParam("username") String username,
 			@RequestParam("password") String password, HttpServletRequest thishttpServletRequest) {
 		
-		System.out.println(thishttpServletRequest.getRemoteAddr());
+	
 		HttpSession session = thishttpServletRequest.getSession();
 		if(session == null){
 			
 		}
-		System.out.println(thishttpServletRequest.getSession(false).getId());
 		
-		return ResponseEntity.ok(username  + "/" + password);
+		
+		System.out.println(username + "/"  + password);
+		
+		LoginResponse r = new LoginResponse();
+		r.session = thishttpServletRequest.getSession(false).getId();
+		return ResponseEntity.ok(r);
 
+	}
+	
+	class LoginResponse{
+		String session;
+
+		public String getSession() {
+			return session;
+		}
+
+		public void setSession(String session) {
+			this.session = session;
+		}
+		
 	}
 
 }
