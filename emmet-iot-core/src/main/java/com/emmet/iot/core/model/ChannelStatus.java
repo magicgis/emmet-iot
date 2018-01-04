@@ -1,7 +1,7 @@
 package com.emmet.iot.core.model;
 
 public class ChannelStatus {
-	private long lastUdateTime;
+	private long lastUpdateTime;
 	private String name;
 	private Object value;
 	private boolean online;
@@ -14,12 +14,14 @@ public class ChannelStatus {
 		this.online = online;
 	}
 
-	public long getLastUdateTime() {
-		return lastUdateTime;
+
+
+	public long getLastUpdateTime() {
+		return lastUpdateTime;
 	}
 
-	public void setLastUdateTime(long lastUdateTime) {
-		this.lastUdateTime = lastUdateTime;
+	public void setLastUpdateTime(long lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
 	}
 
 	public String getName() {
@@ -37,5 +39,13 @@ public class ChannelStatus {
 	public void setValue(Object value) {
 		this.value = value;
 	}
+
+	@Override
+	public String toString() {
+		return "ChannelStatus [lastUpdateTime=" + lastUpdateTime + ", name=" + name + ", value=" + value + ", online="
+				+ online + "]";
+	}
+	
+	
 
 }

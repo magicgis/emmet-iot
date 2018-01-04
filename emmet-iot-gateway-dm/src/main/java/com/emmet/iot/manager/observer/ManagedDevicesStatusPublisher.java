@@ -33,7 +33,7 @@ public class ManagedDevicesStatusPublisher extends BaseDeviceStatusObserver {
 
 	@Bean
     TopicExchange exchange() {
-        return new TopicExchange(deviceStatusTopic);
+        return new TopicExchange(deviceStatusTopic, false, false);
     }
 	
 	@PostConstruct

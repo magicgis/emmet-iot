@@ -76,7 +76,7 @@ public class DeviceStatusDbAdapter {
 				channelEntity.setChannelName(channel.getName());
 				channelEntity.setValue(channel.getValue().toString());
 				Calendar calendar = Calendar.getInstance();
-			    calendar.setTimeInMillis(channel.getLastUdateTime());
+			    calendar.setTimeInMillis(channel.getLastUpdateTime());
 				channelEntity.setLastUpdateTime(calendar);
 				entity.getChannels().add(channelEntity);
 			});

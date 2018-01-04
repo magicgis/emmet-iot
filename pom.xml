@@ -25,6 +25,7 @@
 		<module>emmet-iot-gateway-ds</module>
 		<module>emmet-iot-gateway-mockdevice</module>
 		<module>emmet-iot-gateway-adapter-jdbc</module>
+		<module>emmet-iot-account-manager</module>
 	</modules>
 
 	<dependencies>

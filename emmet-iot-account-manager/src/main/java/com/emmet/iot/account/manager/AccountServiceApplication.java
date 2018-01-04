@@ -1,15 +1,16 @@
-package com.emmet.iot.manager;
+package com.emmet.iot.account.manager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class DeviceManagerApplication {
-
+public class AccountServiceApplication {
+	
+	
 	public static void main(String[] args) {
 
-		SpringApplication.run(DeviceManagerApplication.class, args);
+		SpringApplication.run(AccountServiceApplication.class, args);
 
 	}
 }

@@ -90,13 +90,15 @@ public class DeviceShadow extends MqttPubSubClient {
 
 				try {
 					this.updateShadow(channle);
+					
 				} catch (UpdateChannleException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
-
-			statusListener.onDeviceStatusChange(this.getStatus());
+			status.setOnline(true);
+			statusListener.onDeviceStatusChange(status);
+//			statusListener.onDeviceStatusChange(this.getStatus());
 
 		} else {
 			log.warn("## The message is ignored ## topic: " + topic + " message: " + msg);
