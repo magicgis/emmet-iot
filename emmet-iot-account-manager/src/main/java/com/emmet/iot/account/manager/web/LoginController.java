@@ -27,6 +27,9 @@ public class LoginController {
 		
 		LoginResponse r = new LoginResponse();
 		r.session = thishttpServletRequest.getSession(false).getId();
+		System.out.println(r.getSession());
+			
+		
 		return ResponseEntity.ok(r);
 
 	}
