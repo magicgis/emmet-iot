@@ -17,16 +17,16 @@ public class LoginController {
 			@RequestParam("password") String password, HttpServletRequest thishttpServletRequest) {
 		
 	
-		HttpSession session = thishttpServletRequest.getSession();
+		HttpSession session = thishttpServletRequest.getSession(false);
 		if(session == null){
-			
+			session = thishttpServletRequest.getSession();
 		}
 		
 		
 		System.out.println(username + "/"  + password);
 		
 		LoginResponse r = new LoginResponse();
-		r.session = thishttpServletRequest.getSession(false).getId();
+		r.session = session.getId();
 		System.out.println(r.getSession());
 			
 		
