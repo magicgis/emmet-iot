@@ -81,8 +81,7 @@
 				<configuration>
 					<imageName>emmet/${project.artifactId}</imageName>
 					<baseImage>java</baseImage>
-					<entryPoint>["java", "-jar",
-						"-Xmx32m","/${project.build.finalName}.jar"]</entryPoint>
+					<entryPoint>["java", "-jar","-Xmx32m","/${project.build.finalName}.jar"]</entryPoint>
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 					</imageTags>

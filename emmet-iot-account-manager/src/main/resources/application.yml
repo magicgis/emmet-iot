@@ -5,7 +5,22 @@ spring:
     username: emmet
     password: masterbuilder
     
-    
+  
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+
+---
+spring:
+  profiles: aws
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/emmet
+    username: emmet
+    password: masterbuilder
+
   jpa:
     hibernate:
       ddl-auto: create
