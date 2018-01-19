@@ -1,4 +1,4 @@
-package com.emmet.iot.core.model;
+package com.emmet.iot.core.model.auth;
 
 import java.io.Serializable;
 

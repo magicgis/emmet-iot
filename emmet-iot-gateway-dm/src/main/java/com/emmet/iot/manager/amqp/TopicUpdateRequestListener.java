@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
-import com.emmet.iot.core.model.ChannelUpdateRequest;
+import com.emmet.iot.core.model.device.ChannelUpdateRequest;
 import com.emmet.iot.core.util.JsonHelper;
 import com.emmet.iot.ds.shadow.DeviceShadow;
 import com.emmet.iot.manager.collection.DeviceCollection;

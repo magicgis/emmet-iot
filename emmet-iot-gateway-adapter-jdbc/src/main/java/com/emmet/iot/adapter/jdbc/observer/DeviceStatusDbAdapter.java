@@ -18,7 +18,7 @@ import com.emmet.iot.adapter.jdbc.entity.ChannelValueEntity;
 import com.emmet.iot.adapter.jdbc.entity.DeviceStatusLogEntity;
 import com.emmet.iot.adapter.jdbc.repository.DeviceStatusRepository;
 import com.emmet.iot.core.config.Constant;
-import com.emmet.iot.core.model.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
 import com.emmet.iot.core.mqtt.DevicesTopic;
 import com.emmet.iot.core.mqtt.MqttPubSubClient;
 import com.emmet.iot.core.observer.BaseDeviceStatusObserver;

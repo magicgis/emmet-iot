@@ -1,4 +1,4 @@
-package com.emmet.iot.core.model;
+package com.emmet.iot.core.model.device;
 
 public class ChannelUpdateRequest {
 	private String deviceId;

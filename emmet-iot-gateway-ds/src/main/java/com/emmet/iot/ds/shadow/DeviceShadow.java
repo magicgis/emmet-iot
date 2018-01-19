@@ -9,12 +9,12 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
 
 import com.emmet.iot.core.config.Constant;
-import com.emmet.iot.core.model.ChannelStatus;
-import com.emmet.iot.core.model.ChannelUpdateRequest;
-import com.emmet.iot.core.model.DeviceDataModel;
-import com.emmet.iot.core.model.DeviceStatusListener;
-import com.emmet.iot.core.model.DeviceStatusNotification;
-import com.emmet.iot.core.model.Heartbeat;
+import com.emmet.iot.core.model.device.ChannelStatus;
+import com.emmet.iot.core.model.device.ChannelUpdateRequest;
+import com.emmet.iot.core.model.device.DeviceDataModel;
+import com.emmet.iot.core.model.device.DeviceStatusListener;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.Heartbeat;
 import com.emmet.iot.core.mqtt.DeviceTopic;
 import com.emmet.iot.core.mqtt.DevicesTopic;
 import com.emmet.iot.core.mqtt.MqttPubSubClient;

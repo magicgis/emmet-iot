@@ -1,6 +1,11 @@
 spring:
-  session:
-    store-type: redis
-  redis:
-    host: localhost
-    port: 6379
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/emmet
+    username: emmet
+    password: masterbuilder
+    
+    
+  jpa:
+    hibernate:
+      ddl-auto: create

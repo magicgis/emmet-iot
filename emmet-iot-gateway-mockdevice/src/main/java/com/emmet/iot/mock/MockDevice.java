@@ -14,11 +14,10 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-
-import com.emmet.iot.core.model.ChannelUpdateRequest;
-import com.emmet.iot.core.model.DeviceCommand;
-import com.emmet.iot.core.model.DeviceStatusNotification;
-import com.emmet.iot.core.model.Heartbeat;
+import com.emmet.iot.core.model.device.ChannelUpdateRequest;
+import com.emmet.iot.core.model.device.DeviceCommand;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.Heartbeat;
 import com.emmet.iot.core.mqtt.DeviceTopic;
 import com.emmet.iot.core.mqtt.DevicesTopic;
 import com.emmet.iot.core.mqtt.MqttPubSubClient;

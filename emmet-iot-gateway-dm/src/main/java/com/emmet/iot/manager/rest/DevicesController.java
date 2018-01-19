@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.emmet.iot.core.model.DeviceDataModel;
+import com.emmet.iot.core.model.device.DeviceDataModel;
 import com.emmet.iot.ds.shadow.DeviceShadow;
 import com.emmet.iot.manager.collection.DeviceCollection;
 import com.emmet.iot.manager.exception.DeviceNotFoundException;

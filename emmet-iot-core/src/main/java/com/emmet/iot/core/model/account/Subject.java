@@ -2,6 +2,7 @@ package com.emmet.iot.core.model.account;
 
 import java.util.List;
 
+
 public class Subject {
 	private String id;
 	private String name;

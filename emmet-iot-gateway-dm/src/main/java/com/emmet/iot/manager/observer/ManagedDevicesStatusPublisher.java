@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import com.emmet.iot.core.amqp.DeviceRoutingkey;
 import com.emmet.iot.core.config.Constant;
-import com.emmet.iot.core.model.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
 import com.emmet.iot.core.mqtt.DevicesTopic;
 import com.emmet.iot.core.mqtt.MqttPubSubClient;
 import com.emmet.iot.core.observer.BaseDeviceStatusObserver;

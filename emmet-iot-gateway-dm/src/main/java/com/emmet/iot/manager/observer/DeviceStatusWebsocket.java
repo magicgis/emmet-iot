@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 
-import com.emmet.iot.core.model.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
 import com.emmet.iot.core.observer.BaseDeviceStatusObserver;
 import com.emmet.iot.core.util.JsonHelper;
 

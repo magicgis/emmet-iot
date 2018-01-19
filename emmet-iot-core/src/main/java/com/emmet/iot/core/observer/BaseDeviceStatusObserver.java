@@ -7,7 +7,7 @@ import javax.annotation.PostConstruct;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.emmet.iot.core.model.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
 
 public abstract class BaseDeviceStatusObserver implements DeviceStatusObserver {
 	private static final int CAPACITY = 10000;

@@ -15,10 +15,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.emmet.iot.core.config.Constant;
-import com.emmet.iot.core.model.DeviceStatusListener;
-import com.emmet.iot.core.model.DeviceStatusNotification;
-import com.emmet.iot.core.model.Heartbeat;
-import com.emmet.iot.core.model.RequestDeviceStatusCommand;
+import com.emmet.iot.core.model.device.DeviceStatusListener;
+import com.emmet.iot.core.model.device.DeviceStatusNotification;
+import com.emmet.iot.core.model.device.Heartbeat;
+import com.emmet.iot.core.model.device.RequestDeviceStatusCommand;
 import com.emmet.iot.core.mqtt.MqttPubSubClient;
 import com.emmet.iot.core.mqtt.DeviceTopic;
 import com.emmet.iot.core.mqtt.DevicesTopic;
