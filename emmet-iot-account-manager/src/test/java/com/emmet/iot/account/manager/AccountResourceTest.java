@@ -74,6 +74,9 @@ public class AccountResourceTest {
 		mvc.perform(get("/api/account/" + account.getId()))//
 				.andExpect(jsonPath("name", equalTo(account.getName())));
 
+		mvc.perform(get("/api/account"))//
+				.andExpect(jsonPath("$[0].name", equalTo(account.getName())));
+
 		// create a new subject for the account
 		mvc.perform(post("/api/account/" + account.getId() + "/subject")
 				.contentType(MediaType.APPLICATION_JSON_UTF8_VALUE).content(JsonHelper.ObjectToJsonString(subject)))//
@@ -104,14 +107,13 @@ public class AccountResourceTest {
 		mvc.perform(get("/api/account/" + account.getId()))//
 				.andExpect(jsonPath("subjects[0].topics").isEmpty());
 
-
 		// remove a subject of a account
 		mvc.perform(delete("/api/account/A01/subject/S01")).andExpect(status().isOk());//
 
 		// confirm
 		mvc.perform(get("/api/account/" + account.getId()))//
 				.andExpect(jsonPath("subjects").isEmpty());
-		
+
 		// .andExpect(jsonPath("customerId", equalTo("Bar")))//
 		// .andExpect(jsonPath("name", equalTo("Foo")))//
 		// .andDo(modifyResponseTo(ResponsePostProcessors.prettyPrintContent())//

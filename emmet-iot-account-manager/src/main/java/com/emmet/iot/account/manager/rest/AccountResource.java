@@ -1,5 +1,7 @@
 package com.emmet.iot.account.manager.rest;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +31,13 @@ public class AccountResource {
 
 	@Autowired
 	private TopicRepository topicRepository;
+
+	@RequestMapping(path = "/account", method = RequestMethod.GET)
+	public ResponseEntity<?> getAccountList() {
+
+		return new ResponseEntity<>(accountRepository.findAll(), HttpStatus.OK);
+
+	}
 
 	@RequestMapping(path = "/account/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> getAccount(@PathVariable("id") String id) {
@@ -81,7 +90,7 @@ public class AccountResource {
 			return new ResponseEntity<>("Subject not exist.", HttpStatus.BAD_REQUEST);
 		}
 		subjectRepository.delete(subject);
-		
+
 		return new ResponseEntity<AccountEntity>(account, HttpStatus.OK);
 
 	}
