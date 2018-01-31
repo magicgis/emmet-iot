@@ -98,7 +98,8 @@ public class AccountResourceTest {
 
 		// confirm
 		mvc.perform(get("/api/account/" + account.getId()))//
-				.andExpect(jsonPath("subjects[0].topics[0].name", equalTo(topic.getName())));
+				.andExpect(jsonPath("subjects[0].topics[0].name", equalTo(topic.getName())))//
+				.andExpect(jsonPath("subjects[0].topics[0].readOnly", equalTo(false)));
 
 		// remove a topic from subject
 		mvc.perform(delete("/api/account/A01/subject/S01/topic/T01")).andExpect(status().isOk());//

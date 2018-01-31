@@ -11,6 +11,7 @@ public class TopicEntity {
 	@Id
 	private String id;
 	private String name;
+	private boolean readOnly;
 
 	public String getId() {
 		return id;
@@ -27,5 +28,15 @@ public class TopicEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public boolean isReadOnly() {
+		return readOnly;
+	}
+
+	public void setReadOnly(boolean readOnly) {
+		this.readOnly = readOnly;
+	}
+	
+	
 
 }

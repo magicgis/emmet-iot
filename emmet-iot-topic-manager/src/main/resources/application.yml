@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: iot.emmet-project.com
+    port: 5672
+    virtual-host: /
+    username: emmet
+    password: masterbuilder

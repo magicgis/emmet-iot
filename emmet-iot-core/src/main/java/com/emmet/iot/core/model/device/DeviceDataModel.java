@@ -9,16 +9,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class DeviceDataModel {
-	
+
 	private String deviceId;
 	private boolean online;
+	private boolean readOnly;
 
 	private Map<String, Object> dataChannels = new HashMap<>();
 
 	public DeviceDataModel(String deviceId) {
 		this.deviceId = deviceId;
 	}
-	
+
 	public String getDeviceId() {
 		return deviceId;
 	}
@@ -31,13 +32,20 @@ public class DeviceDataModel {
 		dataChannels.put(channleName, value);
 	}
 
-
 	public boolean isOnline() {
 		return online;
 	}
 
 	public void setOnline(boolean online) {
 		this.online = online;
+	}
+
+	public boolean isReadOnly() {
+		return readOnly;
+	}
+
+	public void setReadOnly(boolean readOnly) {
+		this.readOnly = readOnly;
 	}
 
 	public String toJson() {
